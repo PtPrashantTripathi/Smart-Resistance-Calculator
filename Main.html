@@ -1,223 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-<title>Smart Resistance Calculator</title>
-<meta charset="utf-8">
+  <head>
+    <title>Smart Resistance Calculator</title>
+    <meta charset="utf-8" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img{float:left;}
-.reg1{width: 40px;height: 105px;}
-.reg2{width: 20px;height: 105px;}
-.reg3{width: 10px;height: 85px;}
-.reg4{width: 10px;height: 85px;}
-button{border-radius: 2px;border: 2px solid #000;padding: 15px 32px;}
-body{background-color:gray;align:center;}
-td ,table {
-   border: 1px solid black;
-   text-align: center;
-   font-size:20px;
-}
-table {
-    border-spacing: 0px;
-}
-</style>
-</head>
-<body>
-<script>
-function D_gold() {
-    document.getElementById("txt_D").innerHTML = "5";
-	document.getElementById("color_D").src="img/gold.png"}
-function D_silver() {
-    document.getElementById("txt_D").innerHTML = "10";
-	document.getElementById("color_D").src="img/silver.png"}
-function D_none() {
-    document.getElementById("txt_D").innerHTML = "20";
-	document.getElementById("color_D").src="img/none.png"}
-	
-function A_black() {
-    document.getElementById("txt_A").innerHTML = "0";
-	document.getElementById("color_A").src="img/black.png"}
-function B_black() {
-    document.getElementById("txt_B").innerHTML = "0";
-	document.getElementById("color_B").src="img/black.png"}
-function C_black() {
-    document.getElementById("txt_C").innerHTML = "0";
-	document.getElementById("color_C").src="img/black.png"}
-	
-function A_brown() {
-    document.getElementById("txt_A").innerHTML = "1";
-	document.getElementById("color_A").src="img/brown.png"}
-function B_brown() {
-    document.getElementById("txt_B").innerHTML = "1";
-	document.getElementById("color_B").src="img/brown.png"}
-function C_brown() {
-    document.getElementById("txt_C").innerHTML = "1";
-	document.getElementById("color_C").src="img/brown.png"}
-	
-function A_red() {
-    document.getElementById("txt_A").innerHTML = "2";
-	document.getElementById("color_A").src="img/red.png"}
-function B_red() {
-    document.getElementById("txt_B").innerHTML = "2";
-	document.getElementById("color_B").src="img/red.png"}
-function C_red() {
-    document.getElementById("txt_C").innerHTML = "2";
-	document.getElementById("color_C").src="img/red.png"}
-	
-function A_orange() {
-    document.getElementById("txt_A").innerHTML = "3";
-	document.getElementById("color_A").src="img/orange.png"}
-function B_orange() {
-    document.getElementById("txt_B").innerHTML = "3";
-	document.getElementById("color_B").src="img/orange.png"}
-function C_orange() {
-    document.getElementById("txt_C").innerHTML = "3";
-	document.getElementById("color_C").src="img/orange.png"}
-	
-function A_yellow() {
-    document.getElementById("txt_A").innerHTML = "4";
-	document.getElementById("color_A").src="img/yellow.png"}
-function B_yellow() {
-    document.getElementById("txt_B").innerHTML = "4";
-	document.getElementById("color_B").src="img/yellow.png"}
-function C_yellow() {
-    document.getElementById("txt_C").innerHTML = "4";
-	document.getElementById("color_C").src="img/yellow.png"}
-	
-function A_green() {
-    document.getElementById("txt_A").innerHTML = "5";
-	document.getElementById("color_A").src="img/green.png"}
-function B_green() {
-    document.getElementById("txt_B").innerHTML = "5";
-	document.getElementById("color_B").src="img/green.png"}
-function C_green() {
-    document.getElementById("txt_C").innerHTML = "5";
-	document.getElementById("color_C").src="img/green.png"}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      img {
+        float: left;
+      }
+      .reg1 {
+        width: 40px;
+        height: 105px;
+      }
+      .reg2 {
+        width: 20px;
+        height: 105px;
+      }
+      .reg3 {
+        width: 10px;
+        height: 85px;
+      }
+      .reg4 {
+        width: 10px;
+        height: 85px;
+      }
+      button {
+        border-radius: 2px;
+        border: 2px solid #000;
+        padding: 15px 32px;
+      }
+      body {
+        background-color: gray;
+        align: center;
+      }
+      td,
+      table {
+        border: 1px solid black;
+        text-align: center;
+        font-size: 20px;
+      }
+      table {
+        border-spacing: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function D_gold() {
+        document.getElementById("txt_D").innerHTML = "5";
+        document.getElementById("color_D").src = "img/gold.png";
+      }
+      function D_silver() {
+        document.getElementById("txt_D").innerHTML = "10";
+        document.getElementById("color_D").src = "img/silver.png";
+      }
+      function D_none() {
+        document.getElementById("txt_D").innerHTML = "20";
+        document.getElementById("color_D").src = "img/none.png";
+      }
 
-function A_blue() {
-    document.getElementById("txt_A").innerHTML = "6";
-	document.getElementById("color_A").src="img/blue.png"}
-function B_blue() {
-    document.getElementById("txt_B").innerHTML = "6";
-	document.getElementById("color_B").src="img/blue.png"}
-function C_blue() {
-    document.getElementById("txt_C").innerHTML = "6";
-	document.getElementById("color_C").src="img/blue.png"}
+      function A_black() {
+        document.getElementById("txt_A").innerHTML = "0";
+        document.getElementById("color_A").src = "img/black.png";
+      }
+      function B_black() {
+        document.getElementById("txt_B").innerHTML = "0";
+        document.getElementById("color_B").src = "img/black.png";
+      }
+      function C_black() {
+        document.getElementById("txt_C").innerHTML = "0";
+        document.getElementById("color_C").src = "img/black.png";
+      }
 
-function A_violet() {
-    document.getElementById("txt_A").innerHTML = "7";
-	document.getElementById("color_A").src="img/violte.png"}
-function B_violet() {
-    document.getElementById("txt_B").innerHTML = "7";
-	document.getElementById("color_B").src="img/violte.png"}
-function C_violet() {
-    document.getElementById("txt_C").innerHTML = "7";
-	document.getElementById("color_C").src="img/violte.png"}
-	
-function A_gray() {
-    document.getElementById("txt_A").innerHTML = "8";
-	document.getElementById("color_A").src="img/gray.png"}
-function B_gray() {
-    document.getElementById("txt_B").innerHTML = "8";
-	document.getElementById("color_B").src="img/gray.png"}
-function C_gray() {
-    document.getElementById("txt_C").innerHTML = "8";
-	document.getElementById("color_C").src="img/gray.png"}
-	
-function A_white() {
-    document.getElementById("txt_A").innerHTML = "9";
-	document.getElementById("color_A").src="img/white.png"}
-function B_white() {
-    document.getElementById("txt_B").innerHTML = "9";
-	document.getElementById("color_B").src="img/white.png"}
-function C_white() {
-    document.getElementById("txt_C").innerHTML = "9";
-	document.getElementById("color_C").src="img/white.png"}
-	
+      function A_brown() {
+        document.getElementById("txt_A").innerHTML = "1";
+        document.getElementById("color_A").src = "img/brown.png";
+      }
+      function B_brown() {
+        document.getElementById("txt_B").innerHTML = "1";
+        document.getElementById("color_B").src = "img/brown.png";
+      }
+      function C_brown() {
+        document.getElementById("txt_C").innerHTML = "1";
+        document.getElementById("color_C").src = "img/brown.png";
+      }
 
-</script>
-<table style="background-color:#fff;"  width="100%">
-<tr><td colspan="4">Smart Resistance Calculator</td></tr>
-<tr><td colspan="3"><div style="width:220px; display: block;margin-left: auto;margin-right: auto;">
-<img class="reg1" src="img/R1.png" >
-<img class="reg2" src="img/R2.png" >
-<img class="reg3" style="margin-top: 10px;" src="img/R3.png" >
-<img class="reg4" style="margin-top: 10px;" id="color_A" src="img/red.png"></img>
-<img class="reg3" style="margin-top: 10px;" src="img/R3.png" >
-<img class="reg4" style="margin-top: 10px;" id="color_B" src="img/black.png"></img>
-<img class="reg3" style="margin-top: 10px;" src="img/R3.png" >
-<img class="reg4" style="margin-top: 10px;" id="color_C" src="img/brown.png"></img>
-<img class="reg3" style="margin-top: 10px;" src="img/R3.png" >
-<img class="reg3" style="margin-top: 10px;" src="img/R3.png" >
-<img class="reg4" style="margin-top: 10px;" id="color_D" src="img/gold.png"></img>
-<img class="reg3" style="margin-top: 10px;" src="img/R3.png" >
-<img class="reg2" src="img/R4.png" >
-<img class="reg1" src="img/R5.png" >
-</div>
-</td>
-<td colspan="1">Resistance=<br>
-<span id="txt_A">2</span><span id="txt_B">0</span>*10<sup><span id="txt_C">1</span></sup>±<span id="txt_D">5</span>%‎Ω
-</td></tr>
+      function A_red() {
+        document.getElementById("txt_A").innerHTML = "2";
+        document.getElementById("color_A").src = "img/red.png";
+      }
+      function B_red() {
+        document.getElementById("txt_B").innerHTML = "2";
+        document.getElementById("color_B").src = "img/red.png";
+      }
+      function C_red() {
+        document.getElementById("txt_C").innerHTML = "2";
+        document.getElementById("color_C").src = "img/red.png";
+      }
 
-<tr><td style="background-color:black;color:white;" >A</td>
-<td style="background-color:black;color:white;">B</td>
-<td style="background-color:black;color:white;">C</td>
-<td style="background-color:black;color:white;" >D</td>
-</tr>
+      function A_orange() {
+        document.getElementById("txt_A").innerHTML = "3";
+        document.getElementById("color_A").src = "img/orange.png";
+      }
+      function B_orange() {
+        document.getElementById("txt_B").innerHTML = "3";
+        document.getElementById("color_B").src = "img/orange.png";
+      }
+      function C_orange() {
+        document.getElementById("txt_C").innerHTML = "3";
+        document.getElementById("color_C").src = "img/orange.png";
+      }
 
-<tr><td ><button onclick="A_black()" style="background-color:black;" ></button></td>
-<td ><button onclick="B_black()" style="background-color:black;" ></button></td>
-<td ><button onclick="C_black()" style="background-color:black;" ></button></td>
-<td ><button onclick="D_gold()" style="background-color:gold;" ></button></td>
-</tr>
-<tr>
-<td ><button onclick="A_brown()" style="background-color:brown;" ></button></td>
-<td ><button onclick="B_brown()" style="background-color:brown;" ></button></td>
-<td ><button onclick="C_brown()" style="background-color:brown;" ></button></td>
-<td ><button onclick="D_silver()" style="background-color:silver;" ></button></td>
-</tr>
-<tr>
-<td ><button onclick="A_red()" style="background-color:red;" ></button></td>
-<td ><button onclick="B_red()" style="background-color:red;" ></button></td>
-<td ><button onclick="C_red()" style="background-color:red;" ></button></td>
-<td ><button onclick="D_none()" style="background-color:#fff;" ></button></td>
-</tr>
-<tr>
-<td ><button onclick="A_orange()" style="background-color:orange;" ></button></td>
-<td ><button onclick="B_orange()" style="background-color:orange;" ></button></td>
-<td ><button onclick="C_orange()" style="background-color:orange;" ></button></td>
-<td rowspan="7"></td>
-</tr>
-<tr>
-<td ><button onclick="A_yellow()" style="background-color:yellow;" ></button></td>
-<td ><button onclick="B_yellow()" style="background-color:yellow;" ></button></td>
-<td ><button onclick="C_yellow()" style="background-color:yellow;" ></button></td>
-</tr>
-<tr>
-<td ><button onclick="A_green()" style="background-color:green;" ></button></td>
-<td ><button onclick="B_green()" style="background-color:green;" ></button></td>
-<td ><button onclick="C_green()" style="background-color:green;" ></button></td>
-</tr>
-<tr>
-<td ><button onclick="A_blue()" style="background-color:blue;" ></button></td>
-<td ><button onclick="B_blue()" style="background-color:blue;" ></button></td>
-<td ><button onclick="C_blue()" style="background-color:blue;" ></button></td>
-</tr>
-<tr>
-<td ><button onclick="A_violet()" style="background-color:violet;" ></button></td>
-<td ><button onclick="B_violet()" style="background-color:violet;" ></button></td>
-<td ><button onclick="C_violet()" style="background-color:violet;" ></button></td>
-</tr>
-<tr>
-<td ><button onclick="A_gray()" style="background-color:gray;" ></button></td>
-<td ><button onclick="B_gray()" style="background-color:gray;" ></button></td>
-<td ><button onclick="C_gray()" style="background-color:gray;" ></button></td>
-</tr>
-<tr>
-<td ><button onclick="A_white()" style="background-color:white;" ></button></td>
-<td ><button onclick="B_white()" style="background-color:white;" ></button></td>
-<td ><button onclick="C_white()" style="background-color:white;" ></button></td>
-</tr>
-</table>
-</body></html>
+      function A_yellow() {
+        document.getElementById("txt_A").innerHTML = "4";
+        document.getElementById("color_A").src = "img/yellow.png";
+      }
+      function B_yellow() {
+        document.getElementById("txt_B").innerHTML = "4";
+        document.getElementById("color_B").src = "img/yellow.png";
+      }
+      function C_yellow() {
+        document.getElementById("txt_C").innerHTML = "4";
+        document.getElementById("color_C").src = "img/yellow.png";
+      }
+
+      function A_green() {
+        document.getElementById("txt_A").innerHTML = "5";
+        document.getElementById("color_A").src = "img/green.png";
+      }
+      function B_green() {
+        document.getElementById("txt_B").innerHTML = "5";
+        document.getElementById("color_B").src = "img/green.png";
+      }
+      function C_green() {
+        document.getElementById("txt_C").innerHTML = "5";
+        document.getElementById("color_C").src = "img/green.png";
+      }
+
+      function A_blue() {
+        document.getElementById("txt_A").innerHTML = "6";
+        document.getElementById("color_A").src = "img/blue.png";
+      }
+      function B_blue() {
+        document.getElementById("txt_B").innerHTML = "6";
+        document.getElementById("color_B").src = "img/blue.png";
+      }
+      function C_blue() {
+        document.getElementById("txt_C").innerHTML = "6";
+        document.getElementById("color_C").src = "img/blue.png";
+      }
+
+      function A_violet() {
+        document.getElementById("txt_A").innerHTML = "7";
+        document.getElementById("color_A").src = "img/violte.png";
+      }
+      function B_violet() {
+        document.getElementById("txt_B").innerHTML = "7";
+        document.getElementById("color_B").src = "img/violte.png";
+      }
+      function C_violet() {
+        document.getElementById("txt_C").innerHTML = "7";
+        document.getElementById("color_C").src = "img/violte.png";
+      }
+
+      function A_gray() {
+        document.getElementById("txt_A").innerHTML = "8";
+        document.getElementById("color_A").src = "img/gray.png";
+      }
+      function B_gray() {
+        document.getElementById("txt_B").innerHTML = "8";
+        document.getElementById("color_B").src = "img/gray.png";
+      }
+      function C_gray() {
+        document.getElementById("txt_C").innerHTML = "8";
+        document.getElementById("color_C").src = "img/gray.png";
+      }
+
+      function A_white() {
+        document.getElementById("txt_A").innerHTML = "9";
+        document.getElementById("color_A").src = "img/white.png";
+      }
+      function B_white() {
+        document.getElementById("txt_B").innerHTML = "9";
+        document.getElementById("color_B").src = "img/white.png";
+      }
+      function C_white() {
+        document.getElementById("txt_C").innerHTML = "9";
+        document.getElementById("color_C").src = "img/white.png";
+      }
+    </script>
+    <table style="background-color: #fff" width="100%">
+      <tr>
+        <td colspan="4">Smart Resistance Calculator</td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div
+            style="
+              width: 220px;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            <img class="reg1" src="img/R1.png" />
+            <img class="reg2" src="img/R2.png" />
+            <img class="reg3" style="margin-top: 10px" src="img/R3.png" />
+            <img
+              class="reg4"
+              style="margin-top: 10px"
+              id="color_A"
+              src="img/red.png"
+            />
+            <img class="reg3" style="margin-top: 10px" src="img/R3.png" />
+            <img
+              class="reg4"
+              style="margin-top: 10px"
+              id="color_B"
+              src="img/black.png"
+            />
+            <img class="reg3" style="margin-top: 10px" src="img/R3.png" />
+            <img
+              class="reg4"
+              style="margin-top: 10px"
+              id="color_C"
+              src="img/brown.png"
+            />
+            <img class="reg3" style="margin-top: 10px" src="img/R3.png" />
+            <img class="reg3" style="margin-top: 10px" src="img/R3.png" />
+            <img
+              class="reg4"
+              style="margin-top: 10px"
+              id="color_D"
+              src="img/gold.png"
+            />
+            <img class="reg3" style="margin-top: 10px" src="img/R3.png" />
+            <img class="reg2" src="img/R4.png" />
+            <img class="reg1" src="img/R5.png" />
+          </div>
+        </td>
+        <td colspan="1">
+          Resistance=<br />
+          <span id="txt_A">2</span><span id="txt_B">0</span>*10<sup
+            ><span id="txt_C">1</span></sup
+          >±<span id="txt_D">5</span>%‎Ω
+        </td>
+      </tr>
+
+      <tr>
+        <td style="background-color: black; color: white">A</td>
+        <td style="background-color: black; color: white">B</td>
+        <td style="background-color: black; color: white">C</td>
+        <td style="background-color: black; color: white">D</td>
+      </tr>
+
+      <tr>
+        <td>
+          <button onclick="A_black()" style="background-color: black"></button>
+        </td>
+        <td>
+          <button onclick="B_black()" style="background-color: black"></button>
+        </td>
+        <td>
+          <button onclick="C_black()" style="background-color: black"></button>
+        </td>
+        <td>
+          <button onclick="D_gold()" style="background-color: gold"></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="A_brown()" style="background-color: brown"></button>
+        </td>
+        <td>
+          <button onclick="B_brown()" style="background-color: brown"></button>
+        </td>
+        <td>
+          <button onclick="C_brown()" style="background-color: brown"></button>
+        </td>
+        <td>
+          <button
+            onclick="D_silver()"
+            style="background-color: silver"
+          ></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="A_red()" style="background-color: red"></button>
+        </td>
+        <td>
+          <button onclick="B_red()" style="background-color: red"></button>
+        </td>
+        <td>
+          <button onclick="C_red()" style="background-color: red"></button>
+        </td>
+        <td>
+          <button onclick="D_none()" style="background-color: #fff"></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button
+            onclick="A_orange()"
+            style="background-color: orange"
+          ></button>
+        </td>
+        <td>
+          <button
+            onclick="B_orange()"
+            style="background-color: orange"
+          ></button>
+        </td>
+        <td>
+          <button
+            onclick="C_orange()"
+            style="background-color: orange"
+          ></button>
+        </td>
+        <td rowspan="7"></td>
+      </tr>
+      <tr>
+        <td>
+          <button
+            onclick="A_yellow()"
+            style="background-color: yellow"
+          ></button>
+        </td>
+        <td>
+          <button
+            onclick="B_yellow()"
+            style="background-color: yellow"
+          ></button>
+        </td>
+        <td>
+          <button
+            onclick="C_yellow()"
+            style="background-color: yellow"
+          ></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="A_green()" style="background-color: green"></button>
+        </td>
+        <td>
+          <button onclick="B_green()" style="background-color: green"></button>
+        </td>
+        <td>
+          <button onclick="C_green()" style="background-color: green"></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="A_blue()" style="background-color: blue"></button>
+        </td>
+        <td>
+          <button onclick="B_blue()" style="background-color: blue"></button>
+        </td>
+        <td>
+          <button onclick="C_blue()" style="background-color: blue"></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button
+            onclick="A_violet()"
+            style="background-color: violet"
+          ></button>
+        </td>
+        <td>
+          <button
+            onclick="B_violet()"
+            style="background-color: violet"
+          ></button>
+        </td>
+        <td>
+          <button
+            onclick="C_violet()"
+            style="background-color: violet"
+          ></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="A_gray()" style="background-color: gray"></button>
+        </td>
+        <td>
+          <button onclick="B_gray()" style="background-color: gray"></button>
+        </td>
+        <td>
+          <button onclick="C_gray()" style="background-color: gray"></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="A_white()" style="background-color: white"></button>
+        </td>
+        <td>
+          <button onclick="B_white()" style="background-color: white"></button>
+        </td>
+        <td>
+          <button onclick="C_white()" style="background-color: white"></button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
