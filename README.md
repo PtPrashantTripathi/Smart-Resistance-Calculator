@@ -26,25 +26,27 @@
 </p>
 
 ## About
+
 Smart Resistance Calculator is An android app which provide user to calc the Values of Resister.
 It is Simpaly functional android app
 To view source code & live working of this project View on github.io
 And Click Hare to downlode this project Smart-Resisrance-Calculator.apk
 
 ## Features
+
 - ✔ Completely Offline Resister value Calculator.
 - ✔ Responsive Interface.
 - ✔ Includes Complete guide.
 - ✔ Easy to use.
 
 ## 💻 Technology use
+
 - ✔ Android SDK.
 - ✔ HTML5,CSS3,jQuery & bootstrap for front-end development.
 - ✔ Java for backend.
 - ✔ Apache server for testing and development.
 - ✔ Git for version control.
 - ✔ Notepade++ text for coding.
-
 
 ## 🍰 Contributing
 
@@ -53,6 +55,7 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
 ## 💻 Built with
+
 - [Bootstrap](https://www.getbootstrap.com/)
 - [NODE.js](https://www.axios.com)
 - [qrious](https://jquery.com/)
@@ -89,17 +92,17 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 			</a>
 		</td>
 	</tr>
-</table>  
+</table>
 
 ## Questions and Feedback
 
 **Please contact me using one of the following:**
 
-[![](https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/ptprashant09) 
-[![](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ptprashanttripathi/) 
-[![](https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ptprashanttripathi/) 
-[![](https://img.shields.io/badge/telegram-%233498DB.svg?&style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ptprashanttripathi/) 
-[![](https://img.shields.io/badge/facebook-%231877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/ptprashanttripathi) 
+[![](https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/ptprashant09)
+[![](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ptprashanttripathi/)
+[![](https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ptprashanttripathi/)
+[![](https://img.shields.io/badge/telegram-%233498DB.svg?&style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ptprashanttripathi/)
+[![](https://img.shields.io/badge/facebook-%231877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/ptprashanttripathi)
 [![](https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev-dot-to&logoColor=white)](https://dev.to/ptprashanttripathi)
 
 <p align="center">  
